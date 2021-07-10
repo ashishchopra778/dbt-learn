@@ -39,4 +39,12 @@ models:
                 +materialized: table
         staging:
             +materialized: view
+
+
+vars:
+  segment:
+    segment_page_views_table: "{{ source('segment_fivetran', 'pages') }}"
+    segment_sessionization_trailing_window: 3
+    segment_inactivity_cutoff: 30 * 60
+    segment_pass_through_columns: []
         
