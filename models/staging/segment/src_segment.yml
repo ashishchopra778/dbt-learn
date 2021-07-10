@@ -1,0 +1,8 @@
+version: 2
+
+sources:
+  - name:  segment_fivetran
+    database: orbital-broker-295203
+    tables:
+      - name: pages
+      - name: tracks
